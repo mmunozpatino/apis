@@ -1,0 +1,27 @@
+<br>
+<h2>Ingrese los datos necesarios para el QR</h2>
+<br>
+<select [(ngModel)]="opcion" autofocus>
+  <option value="url" selected>Url</option>
+  <option value="text">Texto</option>
+  <option value="telno">Número de teléfono</option>
+</select>
+<br><br>
+<form>
+<input #value type="text">
+<br><br>
+<div>
+    <button type="submit" (click)='generar(value.value)'>Generar</button>    
+</div>
+</form>
+<br>
+<div *ngIf="loading">
+    <carga class='espera'> </carga>
+</div>
+<br>
+
+<div *ngIf="esta">
+    <img src={{imagen}}>
+</div>
+
+<info [api]='api' [src]='src'> </info>

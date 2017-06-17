@@ -1,0 +1,27 @@
+a{
+    color: #69177C;
+    font-size: 100%;
+    text-decoration: underline; 
+}
+.info{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+.data{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height: 5em;
+    width: content;
+    border: 0.01em solid #69177C;
+    background-color: white;
+    text-align: left;
+    padding: 1em;
+}
+.cerrar{
+    height: 1.5em;
+    position: fixed;
+    bottom: 7.4em;
+    right: 5px;
+}

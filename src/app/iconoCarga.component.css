@@ -1,0 +1,159 @@
+* {
+	transition: all 2s linear 0s;
+}
+
+@keyframes rotor0 {
+	from {
+		transform: rotate(-40deg)
+		           translate(4em)
+		           rotate(40deg);
+
+	}
+	to {
+		transform: rotate(320deg)
+		           translate(4em)
+		           rotate(-320deg);
+
+	}
+}
+
+@keyframes rotor1 {
+	from {
+		transform: rotate(-20deg)
+		           translate(4em)
+		           rotate(20deg);
+
+	}
+	to {
+		transform: rotate(340deg)
+		           translate(4em)
+		           rotate(-340deg);
+
+	}
+}
+
+@keyframes rotor2 {
+	from {
+		transform: rotate(0deg)
+		           translate(4em)
+		           rotate(0deg);
+
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(4em)
+		           rotate(-360deg);
+
+	}
+}
+@keyframes rotor3 {
+	from {
+		transform: rotate(-60deg)
+		           translate(4em)
+		           rotate(60deg);
+
+	}
+	to {
+		transform: rotate(300deg)
+		           translate(4em)
+		           rotate(-300deg);
+
+	}
+}
+@keyframes rotor4 {
+	from {
+		transform: rotate(-80deg)
+		           translate(4em)
+		           rotate(80deg);
+
+	}
+	to {
+		transform: rotate(280deg)
+		           translate(4em)
+		           rotate(-280deg);
+
+	}
+}
+@keyframes rotor5 {
+	from {
+		transform: rotate(-100deg)
+		           translate(4em)
+		           rotate(100deg);
+
+	}
+	to {
+		transform: rotate(260deg)
+		           translate(4em)
+		           rotate(-260deg);
+
+	}
+}
+@keyframes rotor6 {
+	from {
+		transform: rotate(-120deg)
+		           translate(4em)
+		           rotate(120deg);
+
+	}
+	to {
+		transform: rotate(240deg)
+		           translate(4em)
+		           rotate(-240deg);
+
+	}
+}
+.load_div {
+	margin: 4em auto 5em auto;
+	width: 0em;
+	height: 0em;
+}
+
+.loading_init {
+	height: 1em;
+	width: 1em;
+	border-radius: 1em;
+	position: relative;
+	top: 0em;
+	left: 0em;
+}
+
+.init_0 {
+	animation: rotor0 1s infinite linear;
+	background-color: #69177C;
+	top: 0em;
+}
+
+.init_1 {
+	animation: rotor1 1s infinite linear;
+	background-color: #69177C;
+	top: -1em;
+}
+
+.init_2 {
+	animation: rotor2 1s infinite linear;
+	background-color: #69177C;
+	top: -2em;
+}
+
+.init_3 {
+	animation: rotor3 1s infinite linear;
+	background-color: #69177C;
+	top: -3em;
+}
+
+.init_4 {
+	animation: rotor4 1s infinite linear;
+	background-color: #69177C;
+	top: -4em;
+}
+
+.init_5 {
+	animation: rotor5 1s infinite linear;
+	background-color: #69177C;
+	top: -5em;
+}
+.init_6 {
+	animation: rotor6 1s infinite linear;
+	background-color: #69177C;
+	top: -6em;
+}

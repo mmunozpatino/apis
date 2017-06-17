@@ -1,0 +1,107 @@
+<br>
+<h2>Ingrese su ciudad para conocer el clima: </h2>
+<br>
+<div class='body'>
+<input #ciudad type="text" (click)='noResults()'autofocus>
+<button (click)='buscarCity(ciudad.value)' >Buscar !</button>
+<div *ngIf=respuestas  class= 'ListResult' >
+    <div *ngIf=rta >
+       <div *ngFor='let i of rta.Results' (click)='selectCity(i)' class='result'>{{i.name}}</div> 
+    </div>
+</div>
+<br><br>
+<carga *ngIf=loading class='esperaS'> </carga>
+<br>
+<div *ngIf=consulta>
+    <div *ngIf=tiempo>
+        <h2>{{tiempo.location.region}}, {{tiempo.location.country}} </h2>       
+        <br>    
+        <span>Descripcion: </span>
+        <label>{{tiempo.current.condition.text}}</label>
+        <br>
+        <span>Temperatura: </span>
+        <label>{{tiempo.current.temp_c}} °C</label>
+        <br>
+        <span>Temperatura máx:</span>
+        <label>{{tiempo.forecast.forecastday[0].day.maxtemp_c}} °C</label>
+        <br>
+        <span>Temperatura min:</span>
+        <label>{{tiempo.forecast.forecastday[0].day.mintemp_c}} °C</label>
+        <br>
+        <span>Viento: </span>
+        <label>{{tiempo.current.wind_kph}} Km/H</label>
+        <br>
+        <span>Velocidad máx del viento: </span>
+        <label >{{tiempo.forecast.forecastday[0].day.maxwind_kph}} Km/H</label>
+        <br>
+        <span>Pronostico: </span>
+        <br><br>
+        <div class='dia' >
+        <button class='pronostico' (click)="Mostrar()"> {{tiempo.forecast.forecastday[1].date | date}}</button>
+        <br>
+        <div *ngIf=mostrar>
+            <br>
+            <span>Temperatura máx:</span>
+            <label>{{tiempo.forecast.forecastday[1].day.maxtemp_c}} °C</label>
+            <br>
+            <span>Temperatura min:</span>
+            <label>{{tiempo.forecast.forecastday[1].day.mintemp_c}} °C</label>
+            <br>
+            <span>Velocidad máx del viento: </span>
+            <label >{{tiempo.forecast.forecastday[1].day.maxwind_kph}} Km/H</label>
+            <br>    
+        </div>
+        </div>
+        <div  class='dia' >
+        <button class='pronostico'  (click)="Mostrar2()">{{tiempo.forecast.forecastday[2].date | date}}</button>
+        <br>
+        <div *ngIf=mostrar2>
+            <br>
+            <span>Temperatura máx:</span>
+            <label>{{tiempo.forecast.forecastday[2].day.maxtemp_c}} °C</label>
+            <br>
+            <span>Temperatura min:</span>
+            <label>{{tiempo.forecast.forecastday[2].day.mintemp_c}} °C</label>
+            <br>
+            <span>Velocidad máx del viento: </span>
+            <label >{{tiempo.forecast.forecastday[2].day.maxwind_kph}} Km/H</label>
+            <br>    
+        </div>
+        </div>
+        <div class='dia' >
+        <button class='pronostico' (click)="Mostrar3()" >{{tiempo.forecast.forecastday[3].date | date}}</button>
+        <br>
+        <div *ngIf=mostrar3>
+            <br>
+            <span>Temperatura máx:</span>
+            <label>{{tiempo.forecast.forecastday[3].day.maxtemp_c}} °C</label>
+            <br>
+            <span>Temperatura min:</span>
+            <label>{{tiempo.forecast.forecastday[3].day.mintemp_c}} °C</label>
+            <br>
+            <span>Velocidad máx del viento: </span>
+            <label >{{tiempo.forecast.forecastday[3].day.maxwind_kph}} Km/H</label>
+            <br>    
+        </div>
+        </div>
+        <div class="dia" >
+        <button class='pronostico' (click)="Mostrar4()" >{{tiempo.forecast.forecastday[4].date | date}}</button>
+        <br>
+        <div *ngIf=mostrar4>
+            <br>
+            <span>Temperatura máx:</span>
+            <label>{{tiempo.forecast.forecastday[4].day.maxtemp_c}} °C</label>
+            <br>
+            <span>Temperatura min:</span>
+            <label>{{tiempo.forecast.forecastday[4].day.mintemp_c}} °C</label>
+            <br>
+            <span>Velocidad máx del viento: </span>
+            <label >{{tiempo.forecast.forecastday[4].day.maxwind_kph}} Km/H</label>
+            <br>    
+        </div>
+        </div>
+        <br>
+    </div>
+</div>
+<info [api]='api' [src]='src' [api2]='api2' [src2]='src2'></info>
+</div>

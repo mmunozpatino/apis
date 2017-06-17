@@ -1,0 +1,19 @@
+<br><br>
+<h2>Ingrese mail a verificar</h2>
+<br><br>
+<form>
+<input #mail type="mail" autofocus><button type="submit" (click)="verificar(mail.value)">Verificar</button>
+</form>
+<br><br>
+<div *ngIf = 'cargando; then thenCarga else muestra'></div>
+    <ng-template #thenCarga > 
+        <carga class= 'espera'> </carga> 
+    </ng-template>
+    <ng-template #muestra> 
+        <div *ngIf=apiOk>
+        <div *ngIf="respuesta; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock><label>Mail Válido!</label></ng-template>
+            <ng-template #elseBlock><label>Mail Inválido!</label></ng-template> 
+        </div> 
+    </ng-template>
+<info [api]='api' [src]='src'></info>

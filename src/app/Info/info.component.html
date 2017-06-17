@@ -1,0 +1,19 @@
+<button type="button" class='info' (click)='info()'>+info</button>
+
+<div *ngIf=data>
+    <div class='data'>
+        <button class='cerrar' (click)='cerrar()'>x</button>
+        <span>API:</span>
+        <label>{{api}}</label>
+        <br>
+        <span>Source:</span>
+        <a href="{{src}}">{{src}}</a>
+        <div *ngIf=api2>
+            <span>API:</span>
+            <label>{{api2}}</label>
+            <br>
+            <span>Source:</span>
+            <a href="{{src2}}">{{src2}}</a>
+        </div>
+    </div>
+</div>
